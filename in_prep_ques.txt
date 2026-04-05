@@ -1,0 +1,24 @@
+
+"question 1": "Difference Between php 7 and php 8",
+"answer": "PHP 8 introduces several new features and improvements over PHP 7, including named arguments, union types, and the match expression. 1) Now you don't need to worry about the function arguments order.  
+2) You can specify more than one type for a function argument. like function setIdentifier(int|string $id): void{}
+3) The match expression is similar to switch but with safer semantics and ability to return values. Additionally, PHP 8 includes performance enhancements and new functions, making it a significant upgrade from PHP 7. 
+
+
+The Null Safe Operator: PHP 8 uses $country = $user?->getAddress()?->country. 
+switch (PHP 7): Is a statement. It doesn't "result" in anything; it just executes code. It also uses loose comparison ('1' == 1 is true).
+match (PHP 8): Is an expression. This means you can assign the result directly to a variable. It uses strict comparison ('1' === 1 is false), which is much safer.
+
+syntax => 
+// PHP 8 Match
+$status = match($code) {
+    200, 300 => 'success',
+    400 => 'error',
+    default => 'unknown',
+};
+
+"question 2":"What is the difference between == and === in PHP?"
+"answer":== matches the values of two variables but === matches the values on the behalf of the data type of variable
+
+"question 3":"What are traits in PHP and when would you use them?"
+"answer":
